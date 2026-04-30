@@ -2,8 +2,8 @@ cask "alfred-app" do
   version "0.1.0"
   sha256 "98c7103f62300ddbf01d110880e1183408df3d626215c8648fa9233a16943255"
 
-  url "https://downloads.alfred-labs.com/alfred/v#{version}/Alfred-#{version}-darwin-arm64.dmg",
-      verified: "downloads.alfred-labs.com/alfred/"
+  url "https://raw.githubusercontent.com/alfred-labs/alfred-releases/main/downloads/v#{version}/Alfred-#{version}-darwin-arm64.dmg",
+      verified: "raw.githubusercontent.com/alfred-labs/alfred-releases/main/downloads/"
   name "Alfred"
   desc "Local-first desktop app for AI-assisted knowledge workflows"
   homepage "https://github.com/alfred-labs/alfred-releases"
