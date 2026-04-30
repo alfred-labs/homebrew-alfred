@@ -2,7 +2,7 @@
 
 Official Homebrew tap for installing Alfred on Apple Silicon Macs.
 
-This repository contains the cask definition only. Public release artifacts are hosted separately in `alfred-labs/alfred-releases`.
+This repository contains the cask definition only. Public release artifacts are hosted on the Alfred binary-only download host.
 
 ## Install
 
@@ -30,8 +30,8 @@ brew uninstall --cask alfred-labs/alfred/alfred-app
 
 ## Releases
 
-New Alfred Apple Silicon releases are published as DMG assets in:
+New Alfred Apple Silicon releases are published as signed/notarized DMG assets on:
 
-- `https://github.com/alfred-labs/alfred-releases`
+- `https://downloads.alfred-labs.com/alfred`
 
 The cask in this repository is updated to point at those release assets.
