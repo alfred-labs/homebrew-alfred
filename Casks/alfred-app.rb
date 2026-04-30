@@ -2,14 +2,15 @@ cask "alfred-app" do
   version "0.1.0"
   sha256 "98c7103f62300ddbf01d110880e1183408df3d626215c8648fa9233a16943255"
 
-  url "https://raw.githubusercontent.com/alfred-labs/alfred-releases/main/downloads/v#{version}/Alfred-#{version}-darwin-arm64.dmg",
-      verified: "raw.githubusercontent.com/alfred-labs/alfred-releases/main/downloads/"
+  url "https://github.com/alfred-labs/alfred-releases/releases/download/v#{version}/Alfred-#{version}-darwin-arm64.dmg",
+      verified: "github.com/alfred-labs/alfred-releases/"
   name "Alfred"
   desc "Local-first desktop app for AI-assisted knowledge workflows"
   homepage "https://github.com/alfred-labs/alfred-releases"
 
   livecheck do
-    skip "Alfred releases are published by the private binary-only release pipeline."
+    url :url
+    strategy :github_latest
   end
 
   depends_on arch: :arm64
