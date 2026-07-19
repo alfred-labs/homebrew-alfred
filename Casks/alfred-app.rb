@@ -1,6 +1,6 @@
 cask "alfred-app" do
-  version "0.9.6"
-  sha256 "bc06ff64158a8ef311a154b91335a28b3528ae43a0c25d20597d3433edd7b187"
+  version "0.10.0"
+  sha256 "f231bbe30eec5cd2592c8d7094ed05079da1f461549c0643fbd121a95a7f8dd6"
   url "https://github.com/alfred-labs/alfred-releases/releases/download/v#{version}/Alfred-#{version}-darwin-arm64.dmg",
       verified: "github.com/alfred-labs/alfred-releases/"
   name "Alfred"
