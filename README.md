@@ -1,37 +1,56 @@
-# Alfred Homebrew Tap
+# Alfred Labs Homebrew Tap
 
-Official Homebrew tap for installing Alfred on Apple Silicon Macs.
+Homebrew tap for macOS applications published by Alfred Labs.
 
-This repository contains the cask definition only. Public release artifacts are hosted as GitHub Release assets in `alfred-labs/alfred-releases`.
+This repository is used to publish Homebrew cask definitions. Release artifacts
+are hosted in each application's public GitHub releases repository.
 
-## Install
+## LittleSwitch
 
-```bash
-brew tap alfred-labs/alfred
-brew install --cask alfred-labs/alfred/alfred-app
+LittleSwitch is a native menu bar app that routes Claude Desktop, Claude Code,
+Codex, and OpenCode to model providers through a local gateway.
+
+Requires an Apple Silicon Mac running macOS 14 Sonoma or later.
+
+### Install
+
+```sh
+brew install --cask alfred-labs/alfred/littleswitch
 ```
 
-## Upgrade
+Open **LittleSwitch** from Applications after installation.
 
-```bash
+### Upgrade
+
+LittleSwitch includes an updater. To update through Homebrew, finish any sessions
+using the gateway and quit LittleSwitch, then run:
+
+```sh
 brew update
-brew upgrade --cask alfred-labs/alfred/alfred-app
+brew upgrade --cask --greedy alfred-labs/alfred/littleswitch
 ```
 
-## Uninstall
+`--greedy` includes apps that have their own updater.
 
-```bash
-brew uninstall --cask alfred-labs/alfred/alfred-app
+### Uninstall
+
+Disconnect connected clients in LittleSwitch to restore their settings, then
+quit the app before uninstalling:
+
+```sh
+brew uninstall --cask alfred-labs/alfred/littleswitch
 ```
 
-## What This Repo Contains
+Configuration, client-profile restoration data, and Keychain credentials are
+retained. Adding `--zap` also removes LittleSwitch's caches, preferences, and
+saved window state; it preserves configuration and client-profile restoration
+data in Application Support.
 
-- `Casks/alfred-app.rb`: the Homebrew cask used to install Alfred
+### Releases
 
-## Releases
+- [Public releases and DMG downloads](https://github.com/alfred-labs/little-switch-releases/releases)
+- Cask definition: [`Casks/littleswitch.rb`](Casks/littleswitch.rb)
 
-New Alfred Apple Silicon releases are published as signed/notarized DMG assets in:
-
-- `https://github.com/alfred-labs/alfred-releases/releases`
-
-The cask in this repository is updated to point at those release assets.
+For each new release, publish the signed and notarized DMG first, then update
+`version` and `sha256` in the cask. Keep published versioned DMGs unchanged so
+their checksums remain valid.
