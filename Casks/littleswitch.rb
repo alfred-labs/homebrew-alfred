@@ -2,10 +2,10 @@ cask "littleswitch" do
   version "0.4.5"
   sha256 "4f8e5ca0f44dcdbe6c863a48bbe96c372c5b62514ea45ce4433622dd63205355"
 
-  url "https://github.com/alfred-labs/little-switch-releases/releases/download/v#{version}/LittleSwitch-#{version}-arm64.dmg"
+  url "https://github.com/alfred-labs/little-switch/releases/download/v#{version}/LittleSwitch-#{version}-arm64.dmg"
   name "LittleSwitch"
   desc "Menu bar app for routing AI clients to model providers"
-  homepage "https://github.com/alfred-labs/little-switch-releases"
+  homepage "https://github.com/alfred-labs/little-switch"
 
   livecheck do
     url :url
