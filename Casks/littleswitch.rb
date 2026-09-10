@@ -1,6 +1,6 @@
 cask "littleswitch" do
   version "0.4.5"
-  sha256 "4f8e5ca0f44dcdbe6c863a48bbe96c372c5b62514ea45ce4433622dd63205355"
+  sha256 "472f7250541f3bbc50704d8a3e6a3e8c5c73499c973743a6ffce47c721d776a8"
 
   url "https://github.com/alfred-labs/little-switch/releases/download/v#{version}/LittleSwitch-#{version}-arm64.dmg"
   name "LittleSwitch"
